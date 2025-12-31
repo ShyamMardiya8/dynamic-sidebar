@@ -1,0 +1,20 @@
+[
+  {
+    "id": "dashboard",
+    "label": "Dashboard",
+    "path": "/dashboard",
+    "children": []
+  },
+  {
+    "id": "products",
+    "label": "Products",
+    "path": "/products",
+    "children": [
+      {
+        "id": "products1",
+        "label": "Product 1",
+        "path": "/products"
+      }
+    ]
+  }
+]
