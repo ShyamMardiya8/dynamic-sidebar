@@ -17,6 +17,7 @@ const Home = () => {
     child: "",
     parent: "",
   });
+
   const editRoutes = (e, status) => {
     if (status === "child") {
       setInputField({ ...inputField, child: e.target.value });
@@ -35,6 +36,7 @@ const Home = () => {
       setObjValue({ ...objValue, child: e.target.value });
     }
   };
+
   const handleSubmit = (e, childValue, inputFieldValue, parentValue) => {
     e.preventDefault();
     if (!parentValue) {
@@ -112,7 +114,7 @@ const Home = () => {
             width: "50%",
           }}
         >
-          <Panel treeData={treeData} />
+          <Panel treeData={treeData} setTreeData={setTreeData} />
         </div>
       </div>
     </>
