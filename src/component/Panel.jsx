@@ -15,6 +15,7 @@ const Panel = ({ treeData: data, setTreeData }) => {
       setEditValue(label);
       const labelIndex = data.findIndex((i) => i.label === String(label));
       setSelectedIndex(labelIndex);
+      return;
     } else {
       setEditValue(label);
       setSelectedIndex(childIndex);
@@ -22,8 +23,6 @@ const Panel = ({ treeData: data, setTreeData }) => {
         (i) => i.label === String(label)
       );
       setSelectedChildIndex(findChildIndex);
-      console.info("🚀 ~ handleDblClick ~ findChildIndex:", findChildIndex);
-      // setSelectedIndex(labelIndex);
     }
   };
 
@@ -65,7 +64,7 @@ const Panel = ({ treeData: data, setTreeData }) => {
                       <TreeItem
                         itemId={child.id}
                         label={child.label}
-                        onDoubleClick={() => {
+                        onClick={() => {
                           handleDblClick(child.label, "child", index);
                           setEditModal(true);
                         }}
